@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Quieres ser mi San Valentín?</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff7eb9, #ff758c);
+      font-family: 'Arial', sans-serif;
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-top: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    #yesBtn {
+      background: #4caf50;
+      color: white;
+    }
+
+    #noBtn {
+      background: #f44336;
+      color: white;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .girasol {
+      font-size: 10rem;
+      animation: spin 5s linear infinite;
+    }
+
+    a {
+      color: #ffeb3b;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #ffc107;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="questionContainer">
+    <h1>¿Oye Mi vida 🥹? 💖</h1>
+    <h1>¿Quieres ser mi San Valentín? 😍😍💖</h1>
+    <div class="buttons">
+      <button id="yesBtn">¡Sí!</button>
+      <button id="noBtn">No</button>
+    </div>
+  </div>
+
+  <div class="container hidden" id="girasolContainer">
+    <div class="girasol">🌻</div>
+    <h2>Eres mi sol 🌞</h2>
+    <p>Nunca dejes de brillar e iluminar mi vida con tu gran amor 💛</p>
+    <p>¡Te amo! Con todo mi Corazon💖 😍😍😘</p>
+    <p>
+      <a href="https://www.tiktok.com/@letras_love21/video/7199838817648528645?q=14%20de%20febrero%20San%20Valentin&t=1739512225568" target="_blank">
+        Mira este video en TikTok Te Recuerdas  💌
+      </a>
+    </p>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/QYZR5cROgIs?autoplay=1"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <script>
+    const questionContainer = document.getElementById('questionContainer');
+    const girasolContainer = document.getElementById('girasolContainer');
+    const yesBtn = document.getElementById('yesBtn');
+    const noBtn = document.getElementById('noBtn');
+
+    yesBtn.addEventListener('click', () => {
+      questionContainer.classList.add('hidden');
+      girasolContainer.classList.remove('hidden');
+    });
+
+    noBtn.addEventListener('click', () => {
+      alert("¡Vamos, piénsalo de nuevo!🥹 🥹🥹🥹🥹🥹");
+    });
+  </script>
+</body>
+</html>
